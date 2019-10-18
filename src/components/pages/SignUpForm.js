@@ -88,7 +88,7 @@ const SignUpForm = props => {
                                 fullWidth
                                 id="lastName"
                                 label="Last Name"
-                                type="text"
+                                type="text"                               
                                 component={renderTextField}
                             />
                         </Grid>
@@ -99,7 +99,8 @@ const SignUpForm = props => {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Email Address"
+                                label="Email Address"    
+                                autoComplete="new-email"                           
                                 component={renderTextField}
                             />
                         </Grid>
@@ -112,6 +113,7 @@ const SignUpForm = props => {
                                 name="password"
                                 label="password"
                                 type="password"
+                                autoComplete="new-password"
                                 component={renderTextField}
                             />
                         </Grid>

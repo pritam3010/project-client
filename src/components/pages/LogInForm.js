@@ -3,7 +3,7 @@ import { Field, reduxForm } from "redux-form";
 import { Link as routerLink } from "react-router-dom/";
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Typograhpy from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
@@ -55,9 +55,9 @@ const LogInForm = props => {
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.formBox}>
-                <Typograhpy component="h1" variant="h5">
+                <Typography component="h1" variant="h5">
                     Log In
-                </Typograhpy>
+                </Typography>
                 <form
                     className={classes.form}
                     onSubmit={handleSubmit(onSubmit)}
@@ -107,7 +107,7 @@ const LogInForm = props => {
                             <Link
                                 variant="body2"
                                 component={routerLink}
-                                to="/login"
+                                to="/forgotpassword"
                             >
                                 Forgot password?
                             </Link>
