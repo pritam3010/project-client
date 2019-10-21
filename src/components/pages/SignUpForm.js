@@ -1,18 +1,19 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { Link as RouterLink } from "react-router-dom";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import {
     Container,
     TextField,
-    Checkbox,
     CssBaseline,
     Typography,
     Grid,
     Button,
-    Link,
-    FormControlLabel
+    Link
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
+import "./SignUpForm.css";
 
 const useStyles = makeStyles(theme => {
     return {
@@ -36,23 +37,16 @@ const renderTextField = ({ input, ...customs }) => (
     <TextField {...input} {...customs} />
 );
 
-const renderCheckbox = ({ input, label, ...customs }) => (
-    <FormControlLabel
-        control={
-            <Checkbox
-                checked={input.value ? true : false}
-                onChange={input.onChange}
-                {...customs}
-            />
-        }
-        label={label}
-    />
-);
-
 const SignUpForm = props => {
     const classes = useStyles();
-    const onSubmit = formValues => {
-        props.onSubmit(formValues);
+    const { executeRecaptcha } = useGoogleReCaptcha();
+
+    const onSubmit = async formValues => {
+        const token = await executeRecaptcha("signup_page");
+        console.log(token);
+        if (token) {
+            props.onSubmit(formValues);
+        }
     };
 
     return (
@@ -88,7 +82,7 @@ const SignUpForm = props => {
                                 fullWidth
                                 id="lastName"
                                 label="Last Name"
-                                type="text"                               
+                                type="text"
                                 component={renderTextField}
                             />
                         </Grid>
@@ -99,8 +93,8 @@ const SignUpForm = props => {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Email Address"    
-                                autoComplete="new-email"                           
+                                label="Email Address"
+                                autoComplete="new-email"
                                 component={renderTextField}
                             />
                         </Grid>
@@ -117,15 +111,18 @@ const SignUpForm = props => {
                                 component={renderTextField}
                             />
                         </Grid>
-                        <Grid item xs={12}>
-                            <Field
-                                name="emailUpdates"
-                                color="primary"
-                                label="I want to receive product offers, updates and news."
-                                component={renderCheckbox}
-                            />
-                        </Grid>
                     </Grid>
+                    <small>
+                        This site is protected by reCAPTCHA and the Google&nbsp;
+                        <RouterLink to="https://policies.google.com/privacy">
+                            Privacy Policy&nbsp;
+                        </RouterLink>
+                        and&nbsp;
+                        <RouterLink to="https://policies.google.com/terms">
+                            Terms of Service&nbsp;
+                        </RouterLink>
+                        apply.
+                    </small>
                     <Button
                         type="submit"
                         fullWidth

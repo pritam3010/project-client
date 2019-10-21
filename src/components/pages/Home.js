@@ -14,7 +14,7 @@ const Home = () => {
             <Route path="/" exact component={HomePage} />
             <Route path="/login" exact component={LogIn} />
             <Route path="/register" exact component={SignUp} />
-            <Route path="/forgotpassword" exact component={ForgotPassword} />
+            <Route path="/forgot-password" exact component={ForgotPassword} />
         </Fragment>
     );
 };

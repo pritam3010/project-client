@@ -107,7 +107,7 @@ const LogInForm = props => {
                             <Link
                                 variant="body2"
                                 component={routerLink}
-                                to="/forgotpassword"
+                                to="/forgot-password"
                             >
                                 Forgot password?
                             </Link>

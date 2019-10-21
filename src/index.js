@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { ConnectedRouter as Router } from "connected-react-router";
 import { Route } from "react-router-dom";
 import { Provider } from "react-redux";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 import ThemeProvider from "@material-ui/styles/ThemeProvider";
 import { createMuiTheme } from "@material-ui/core/styles";

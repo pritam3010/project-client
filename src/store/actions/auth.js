@@ -49,6 +49,7 @@ export const registerUser = (formValues, history) => async dispatch => {
     dispatch(signUpStart());
     try {
         const response = await axiosConfig.put("account/register", formValues);
+        console.log(response);
         dispatch({ type: SIGN_UP_SUCCESS, payload: response.data });
         dispatch(push("/login"));
         // history.push("/login");

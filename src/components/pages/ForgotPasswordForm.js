@@ -1,12 +1,15 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { Link as routerLink } from "react-router-dom/";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import Link from "@material-ui/core/Link";
 import {
     TextField,
     CssBaseline,
     Container,
     Typography,
-    Button
+    Button,
+    Grid
 } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -64,6 +67,17 @@ const ForgotPasswordForm = () => {
                     >
                         Submit
                     </Button>
+                    <Grid container>
+                        <Grid item xs>
+                            <Link
+                                variant="body2"
+                                component={routerLink}
+                                to="/login"
+                            >
+                                {"Back to Login page?"}
+                            </Link>
+                        </Grid>
+                    </Grid>
                 </form>
             </div>
         </Container>
