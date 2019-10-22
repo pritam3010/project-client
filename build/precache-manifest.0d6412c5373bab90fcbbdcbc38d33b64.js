@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47b1354b5907d90573b36c7008b8544c",
+    "revision": "082fd4563fbe2d04f584cf0033775740",
     "url": "/index.html"
   },
   {
-    "revision": "0928d5f8398f76e70c3a",
+    "revision": "40d10d107e9756d8f812",
     "url": "/static/css/2.239f4597.chunk.css"
   },
   {
-    "revision": "97cccf380ad7e5a63aad",
+    "revision": "adcb318edb22be5b3ce7",
     "url": "/static/css/main.21687c4d.chunk.css"
   },
   {
-    "revision": "0928d5f8398f76e70c3a",
-    "url": "/static/js/2.33954543.chunk.js"
+    "revision": "40d10d107e9756d8f812",
+    "url": "/static/js/2.9d50555c.chunk.js"
   },
   {
-    "revision": "97cccf380ad7e5a63aad",
-    "url": "/static/js/main.0df86f94.chunk.js"
+    "revision": "adcb318edb22be5b3ce7",
+    "url": "/static/js/main.40db6179.chunk.js"
   },
   {
     "revision": "2bff3d60d30ac8d79da4",
@@ -92,8 +92,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/lightning.20953ebb.svg"
   },
   {
-    "revision": "ebd82f6bc91e7121baa5e6647f5c8ba5",
-    "url": "/static/media/logo.ebd82f6b.svg"
+    "revision": "834d7284bbf35889f3492b4ce202691f",
+    "url": "/static/media/logo-white.834d7284.svg"
+  },
+  {
+    "revision": "318de157c016ec4c0b3188ec145865c5",
+    "url": "/static/media/logo.318de157.svg"
   },
   {
     "revision": "cd246c336989762fd88c8359905c5349",
