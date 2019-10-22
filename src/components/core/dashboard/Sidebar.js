@@ -14,8 +14,7 @@ import Add from "@material-ui/icons/Add";
 
 import { createProject, getProjects } from "../../../store/actions";
 import NewProjectForm from "./newProjectForm/NewProjectForm";
-
-import svg from "./svg";
+import logoWhite from "../../../assests/svg/homepage/logo-white.svg";
 import imageBlurred from "../../../assests/img/mountain-blurred.jpg";
 
 const styles = {
@@ -105,7 +104,9 @@ class Sidebar extends Component {
         return (
             <div className={classes.sidebar} style={{ width: "410px" }}>
                 <div className={classes.logoContainer}>
-                    <div className={classes.logo}>{svg}</div>
+                    <div className={classes.logo}>
+                        <img src={logoWhite} />
+                    </div>
                 </div>
                 <div className={classes.project}>
                     <Typography variant="h6">Projects</Typography>

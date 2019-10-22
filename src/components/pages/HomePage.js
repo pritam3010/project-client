@@ -12,7 +12,7 @@ import collaboration from "../../assests/svg/homepage/collaboration.svg";
 import web from "../../assests/svg/homepage/web.svg";
 import mobile from "../../assests/svg/homepage/mobile.svg";
 
-import projectBoard from "../../assests/svg/homepage/project-board.png";
+import projectBoard from "../../assests/img/project-board.png";
 
 import taskRelation from "../../assests/svg/homepage/task.svg";
 import automation from "../../assests/svg/homepage/automation.svg";
