@@ -19,10 +19,12 @@ function Greeting() {
     const [time, setTime] = useState(format(new Date(), "h:mm a"));
 
     useEffect(() => {
-        setInterval(() => {
+        // add when mounted
+        const interval = setInterval(() => {
             setTime(format(new Date(), "h:mm a"));
         }, 1000 * 60 - new Date().getSeconds() * 1000);
-        return () => clearInterval(time);
+        // return function to be called when unmounted
+        return () => clearInterval(interval);
     }, []);
 
     return (

@@ -85,14 +85,15 @@ const LogInForm = props => {
                         label="Password"
                         placeholder="Enter your password"
                         type="password"
+                        autoComplete="new-password"
                         component={renderTextField}
                     />
-                    <Field
+                    {/* <Field
                         name="remember"
                         label="Remember me"
                         color="primary"
                         component={renderCheckBox}
-                    />
+                    /> */}
                     <Button
                         type="submit"
                         fullWidth

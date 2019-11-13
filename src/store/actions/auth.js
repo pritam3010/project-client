@@ -85,9 +85,11 @@ export const signIn = (formValues, history) => async dispatch => {
     }
 };
 
-export const signOut = () => {
+export const signOut = () => dispatch => {
     localStorage.removeItem("token");
-    return { type: SIGN_OUT };
+    push("/loggedout");
+    dispatch(push("/loggedout"));
+    dispatch({ type: SIGN_OUT });
 };
 
 export const checkAuthTimeout = expirationTime => {

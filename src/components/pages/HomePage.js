@@ -30,30 +30,26 @@ import greyCloud from "../../assests/svg/homepage/grey-cloud.svg";
 
 import checkmarkBlue from "../../assests/svg/homepage/checkmark-blue.svg";
 
-import facebook from "../../assests/svg/homepage/facebook-white.svg";
-import twitter from "../../assests/svg/homepage/twitter-white.svg";
-import googlePlay from "../../assests/svg/homepage/google-play.svg";
-import appStore from "../../assests/svg/homepage/app-store-en.svg";
-
+import Footer from "./Footer";
 const HomePage = () => {
     return (
         <>
-            <main style={{ marginTop: "86px", display: "block" }}>
-                <section class="header">
-                    <div column="" class="content-wrapper">
+            <main style={{ marginTop: "86px" }}>
+                <section className="header">
+                    <div column="" className="content-wrapper">
                         <img
-                            class="header-arcs"
+                            className="header-arcs"
                             src={roundedRectangle}
                             alt=""
                         />
-                        <h1 class="fw-black ta-center">
+                        <h1 className="fw-black ta-center">
                             Manage Less. Do More.
-                            <span class="h1 fw-light c-grey500 h-block">
+                            <span className="h1 fw-light c-grey500 h-block">
                                 Task Management for Teams
                             </span>
                         </h1>
-                        <div class="signup-wrapper">
-                            <form onsubmit="onSubmit(); return false;">
+                        <div className="signup-wrapper">
+                            <form>
                                 <input
                                     id="useremail"
                                     type="text"
@@ -64,13 +60,13 @@ const HomePage = () => {
                                     id="signup-button"
                                     value="Get Started for Free"
                                     type="submit"
-                                    class="button blue signup"
+                                    className="button blue signup"
                                 />
                             </form>
                         </div>
                         <div>
                             <img
-                                class="header-graphic"
+                                className="header-graphic"
                                 src={headerGraphic}
                                 alt=""
                             />
@@ -78,13 +74,13 @@ const HomePage = () => {
                     </div>
                 </section>
 
-                <section class="bg-blue">
-                    <div class="content-wrapper">
-                        <h2 class="ta-center c-white fw-light mb-20">
+                <section className="bg-blue">
+                    <div className="content-wrapper">
+                        <h2 className="ta-center c-white fw-light mb-20">
                             MeisterTask is an online task management tool for
                             teams.
                         </h2>
-                        <h3 class="ta-center c-white fw-light">
+                        <h3 className="ta-center c-white fw-light">
                             Across the world, teams use MeisterTask to organize
                             and manage tasks in a beautifully designed,
                             customizable environment that adapts to their
@@ -97,19 +93,19 @@ const HomePage = () => {
                 </section>
 
                 <section>
-                    <div class="content-wrapper">
-                        <h2 class="fw-black ta-center">
+                    <div className="content-wrapper">
+                        <h2 className="fw-black ta-center">
                             New to Online Task Management?
                         </h2>
-                        <h2 class="ta-center mb-50">
+                        <h2 className="ta-center mb-50">
                             At Meister, we pride ourselves on creating products
                             that are truly intuitive and user-friendly. Here's
                             what you can expect when you use MeisterTask:
                         </h2>
-                        <div class="block-listing-wrapper">
-                            <div class="block-listing-item-2">
+                        <div className="block-listing-wrapper">
+                            <div className="block-listing-item-2">
                                 <img
-                                    class="js-lazy-image js-lazy-image-handled"
+                                    className="js-lazy-image js-lazy-image-handled"
                                     src={lighning}
                                     alt=""
                                 />
@@ -123,9 +119,9 @@ const HomePage = () => {
                                     MeisterTask.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2">
+                            <div className="block-listing-item-2">
                                 <img
-                                    class="js-lazy-image js-lazy-image-handled"
+                                    className="js-lazy-image js-lazy-image-handled"
                                     src={bulb}
                                     alt=""
                                 />
@@ -139,9 +135,9 @@ const HomePage = () => {
                                     offering of the most essential features.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2">
+                            <div className="block-listing-item-2">
                                 <img
-                                    class="js-lazy-image js-lazy-image-handled"
+                                    className="js-lazy-image js-lazy-image-handled"
                                     src={task}
                                     alt=""
                                 />
@@ -155,9 +151,9 @@ const HomePage = () => {
                                     project’s progress.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2">
+                            <div className="block-listing-item-2">
                                 <img
-                                    class="js-lazy-image js-lazy-image-handled"
+                                    className="js-lazy-image js-lazy-image-handled"
                                     src={collaboration}
                                     alt=""
                                 />
@@ -171,9 +167,9 @@ const HomePage = () => {
                                 </p>
                             </div>
 
-                            <div class="block-listing-item-2">
+                            <div className="block-listing-item-2">
                                 <img
-                                    class="js-lazy-image js-lazy-image-handled"
+                                    className="js-lazy-image js-lazy-image-handled"
                                     src={web}
                                     alt=""
                                 />
@@ -186,9 +182,9 @@ const HomePage = () => {
                                 </p>
                             </div>
 
-                            <div class="block-listing-item-2">
+                            <div className="block-listing-item-2">
                                 <img
-                                    class="js-lazy-image js-lazy-image-handled"
+                                    className="js-lazy-image js-lazy-image-handled"
                                     src={mobile}
                                     alt=""
                                 />
@@ -196,7 +192,7 @@ const HomePage = () => {
                                 <p>
                                     Stay up to date wherever you are with
                                     MeisterTask's free{" "}
-                                    <a href="#">task management apps</a>.
+                                    <a href="/">task management apps</a>.
                                     Available for Android and iOS. These apps
                                     come fully loaded with offline
                                     functionality.
@@ -204,9 +200,9 @@ const HomePage = () => {
                             </div>
                         </div>
 
-                        <div class="h-flex justify-center mt-10">
+                        <div className="h-flex justify-center mt-10">
                             <Link
-                                class="iconed-button large mv-auto"
+                                className="iconed-button large mv-auto"
                                 to="/register"
                             >
                                 Sign Up for Free
@@ -216,9 +212,9 @@ const HomePage = () => {
                 </section>
 
                 <section className="bg-grey100">
-                    <div class="content-wrapper split-section">
-                        <div class="small-section">
-                            <h2 class="fw-black mb-10">
+                    <div className="content-wrapper split-section">
+                        <div className="small-section">
+                            <h2 className="fw-black mb-10">
                                 A Workflow That Makes Sense
                             </h2>
                             <p>
@@ -232,7 +228,7 @@ const HomePage = () => {
                             <img
                                 className="resp-img-600px bs-big rad-10px mv-20 maxh-400 js-lazy-image js-lazy-image-handled"
                                 src={projectBoard}
-                                alt
+                                alt=""
                             />
                         </div>
                     </div>
@@ -243,13 +239,13 @@ const HomePage = () => {
                         <h2 className="fw-black ta-center">
                             Outstanding Features &amp; Automations
                         </h2>
-                        <h2 class="ta-center mb-50">
+                        <h2 className="ta-center mb-50">
                             Power features allow you to automate your workflow
                             and save time every day:
                         </h2>
-                        <div class="block-listing-wrapper">
-                            <div class="block-listing-item-2 with-link">
-                                <img src={taskRelation} />
+                        <div className="block-listing-wrapper">
+                            <div className="block-listing-item-2 with-link">
+                                <img src={taskRelation} alt="" />
                                 <h3>Task Relationships</h3>
                                 <p>
                                     Mark tasks as related to, duplicated or
@@ -257,7 +253,7 @@ const HomePage = () => {
                                     blockage is resolved.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2 with-link">
+                            <div className="block-listing-item-2 with-link">
                                 <img src={automation} alt="" />
                                 <h3>Automations</h3>
                                 <p>
@@ -267,7 +263,7 @@ const HomePage = () => {
                                     harder.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2 with-link">
+                            <div className="block-listing-item-2 with-link">
                                 <img src={multipleChecklist} alt="" />
                                 <h3>Multiple Checklists</h3>
                                 <p>
@@ -276,7 +272,7 @@ const HomePage = () => {
                                     reused.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2 with-link">
+                            <div className="block-listing-item-2 with-link">
                                 <img src={recurringTask} alt="" />
                                 <h3>Recurring Tasks</h3>
                                 <p>
@@ -285,7 +281,7 @@ const HomePage = () => {
                                     again.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2 with-link">
+                            <div className="block-listing-item-2 with-link">
                                 <img src={timeTracking} alt="" />
                                 <h3>Time Tracking</h3>
                                 <p>
@@ -296,7 +292,7 @@ const HomePage = () => {
                                     unnecessary distractions and stay focused.
                                 </p>
                             </div>
-                            <div class="block-listing-item-2 with-link">
+                            <div className="block-listing-item-2 with-link">
                                 <img src={customFields} alt="" />
                                 <h3>Custom Fields</h3>
                                 <p>
@@ -317,6 +313,7 @@ const HomePage = () => {
                                 <img
                                     className="maxw-130 js-lazy-image js-lazy-image-handled"
                                     src={greyList}
+                                    alt="List Icon"
                                 />
                                 <h2>What is task management?</h2>
                                 <p>
@@ -335,6 +332,7 @@ const HomePage = () => {
                                 <img
                                     className="maxw-130 js-lazy-image js-lazy-image-handled"
                                     src={greyDevices}
+                                    alt="Device Icon"
                                 />
                                 <h2>What is task management software?</h2>
                                 <p>
@@ -355,6 +353,7 @@ const HomePage = () => {
                                 <img
                                     className="maxw-200 js-lazy-image js-lazy-image-handled"
                                     src={greyTask}
+                                    alt="Task Icon"
                                 />
                                 <h2>In a nutshell…</h2>
                                 <p>
@@ -373,6 +372,7 @@ const HomePage = () => {
                                 <img
                                     className="maxw-300 js-lazy-image js-lazy-image-handled"
                                     src={greyProject}
+                                    alt="Project Icon"
                                 />
                                 <h2> What is Kanban?</h2>
                                 <p>
@@ -395,6 +395,7 @@ const HomePage = () => {
                                 <img
                                     className="maxw-200 js-lazy-image js-lazy-image-handled"
                                     src={greyManagement}
+                                    alt="Management Icon"
                                 />
                                 <h2>Why is task management important?</h2>
                                 <p>
@@ -415,6 +416,7 @@ const HomePage = () => {
                                 <img
                                     className="maxw-84 js-lazy-image js-lazy-image-handled"
                                     src={greyCloud}
+                                    alt="Cloud Icon"
                                 />
                                 <h2>
                                     What are the advantages of task management
@@ -449,6 +451,7 @@ const HomePage = () => {
                             <img
                                 className="s-24 p-4 mr-15"
                                 src={checkmarkBlue}
+                                alt="Check Mark"
                             />
                             <h4>Do you need a tool that’s easy to use?</h4>
                         </div>
@@ -456,6 +459,7 @@ const HomePage = () => {
                             <img
                                 className="s-24 p-4 mr-15 js-lazy-image js-lazy-image-handled"
                                 src={checkmarkBlue}
+                                alt="Check Mark"
                             />
                             <h4>
                                 Do you need a tool that can be used
@@ -466,6 +470,7 @@ const HomePage = () => {
                             <img
                                 className="s-24 p-4 mr-15 js-lazy-image js-lazy-image-handled"
                                 src={checkmarkBlue}
+                                alt="Check Mark"
                             />
                             <h4>
                                 Do you need a tool that is not limited to a
@@ -476,6 +481,7 @@ const HomePage = () => {
                             <img
                                 className="s-24 p-4 mr-15 js-lazy-image js-lazy-image-handled"
                                 src={checkmarkBlue}
+                                alt="Check Mark"
                             />
                             <h4>
                                 Do you work remotely? Or do you work within a
@@ -486,6 +492,7 @@ const HomePage = () => {
                             <img
                                 className="s-24 p-4 mr-15 js-lazy-image js-lazy-image-handled"
                                 src={checkmarkBlue}
+                                alt="Check Mark"
                             />
                             <h4>
                                 Do you need a task management tool which allows
@@ -496,10 +503,11 @@ const HomePage = () => {
                             <img
                                 className="s-24 p-4 mr-15 js-lazy-image js-lazy-image-handled"
                                 src={checkmarkBlue}
+                                alt="Check Mark"
                             />
                             <h4>Do you need a task tracking tool?</h4>
                         </div>
-                        <h4 class="fw-heavy mb-60">
+                        <h4 className="fw-heavy mb-60">
                             If you answered yes to any of these questions then
                             yes — MeisterTask is the best task management tool
                             for you and your team! So, what are you waiting for?
@@ -510,37 +518,7 @@ const HomePage = () => {
                     </div>
                 </section>
             </main>
-            <footer>
-                <hr />
-                <div class="footer-wrapper">
-                    <div class="subfooter">
-                        <span class="fw-heavy">© 2019 MeisterLabs</span>
-                        <a href="https://www.mindmeister.com/legal?product=2">
-                            Terms of Service
-                        </a>
-                        <a href="https://www.meistertask.com/imprint">
-                            Imprint
-                        </a>
-                        <a href="https://www.mindmeister.com/privacy?product=2">
-                            Privacy
-                        </a>
-                    </div>
-                    <div class="subfooter">
-                        <a className="mr-10 s-24" href="https://facebook.com">
-                            <img src={facebook} />
-                        </a>
-                        <a className="mh-10 s-24" href="https://twitter.com">
-                            <img src={twitter} />
-                        </a>
-                        <a href="#" class="mh-10" href="#">
-                            <img class="w-120px h-40px" src={googlePlay} />
-                        </a>
-                        <a href="#" class="mh-10" href="#">
-                            <img class="w-136px h-40px" src={appStore} />
-                        </a>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </>
     );
 };

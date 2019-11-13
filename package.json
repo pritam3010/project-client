@@ -12,6 +12,7 @@
     "date-fns": "^2.0.1",
     "emoji-mart": "^2.11.1",
     "jwt-decode": "^2.2.0",
+    "material-ui-popup-state": "^1.4.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-google-recaptcha-v3": "^1.4.0",

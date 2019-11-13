@@ -13,20 +13,22 @@ import {
 import Add from "@material-ui/icons/Add";
 
 import { createProject, getProjects } from "../../../store/actions";
-import NewProjectForm from "./newProjectForm/NewProjectForm";
+import ProjectForm from "./newProjectForm/ProjectForm";
 import logoWhite from "../../../assests/svg/homepage/logo-white.svg";
 import imageBlurred from "../../../assests/img/mountain-blurred.jpg";
 
 const styles = {
+    root: {
+        background: `url(${imageBlurred}) center center / cover`,
+        clip: "rect(0px, 320px, auto, 0px)"
+    },
     sidebar: {
-        backgroundImage: `url(${imageBlurred})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        width: "320px",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
-        background: "lightgrey",
+        background:
+            "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%)",
         zIndex: 10
     },
     logoContainer: {
@@ -60,6 +62,7 @@ const styles = {
         }
     },
     divider: {
+        width: "280px",
         margin: "0 20px",
         background: "rgba(255, 255, 255, 0.4)"
     }
@@ -102,32 +105,35 @@ class Sidebar extends Component {
         const { classes } = this.props;
 
         return (
-            <div className={classes.sidebar} style={{ width: "410px" }}>
-                <div className={classes.logoContainer}>
-                    <div className={classes.logo}>
-                        <img src={logoWhite} />
+            <div className={classes.root}>
+                <div className={classes.sidebar}>
+                    <div className={classes.logoContainer}>
+                        <div className={classes.logo}>
+                            <img src={logoWhite} alt="App White Logo" />
+                        </div>
                     </div>
-                </div>
-                <div className={classes.project}>
-                    <Typography variant="h6">Projects</Typography>
-                    <div onClick={this.handleClickOpen}>
-                        <Add className={classes.addIcon} />
+                    <div className={classes.project}>
+                        <Typography variant="h6">Projects</Typography>
+                        <div onClick={this.handleClickOpen}>
+                            <Add className={classes.addIcon} />
+                        </div>
                     </div>
-                </div>
-                <Divider className={classes.divider} />
-                <div>
-                    <List component="nav" aria-label="Project List">
-                        {this.renderProjectList()}
-                        {/* <ListItemLink href="#simple-list">
+                    <Divider className={classes.divider} />
+                    <div>
+                        <List component="nav" aria-label="Project List">
+                            {this.renderProjectList()}
+                            {/* <ListItemLink href="#simple-list">
                           <ListItemText primary="Spam" />
                             </ListItemLink> */}
-                    </List>
+                        </List>
+                    </div>
+
+                    <ProjectForm
+                        open={this.state.open}
+                        handleClose={this.handleClose}
+                        onFormSubmit={this.onProjectFormSubmit}
+                    />
                 </div>
-                <NewProjectForm
-                    open={this.state.open}
-                    handleClose={this.handleClose}
-                    onFormSubmit={this.onProjectFormSubmit}
-                />
             </div>
         );
     }
@@ -136,7 +142,6 @@ class Sidebar extends Component {
 const mapStateToProps = (state, ownProps) => {
     return { projects: state.projects.projects };
 };
-export default connect(
-    mapStateToProps,
-    { createProject, getProjects }
-)(withStyles(styles)(Sidebar));
+export default connect(mapStateToProps, { createProject, getProjects })(
+    withStyles(styles)(Sidebar)
+);

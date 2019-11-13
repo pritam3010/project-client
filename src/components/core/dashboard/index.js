@@ -19,9 +19,10 @@ const useStyle = makeStyles({
         color: "white"
     },
     container: {
-        width: "100%",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        flexGrow: 1,
+        flexShrink: 1
     },
     content: {
         height: "calc(100vh - 80px)",

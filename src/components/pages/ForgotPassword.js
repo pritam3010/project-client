@@ -1,5 +1,4 @@
 import React from "react";
-import { connet } from "react-redux";
 
 import ForgotPasswordForm from "./ForgotPasswordForm";
 
